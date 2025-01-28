@@ -20,8 +20,7 @@ export default function Feedbacks() {
       <p className="text-white text-base mb-6">
       Nosso foco é te levar para viver momentos inesquecíveis com seus artistas favoritos!
       </p>
-      {/* <p className="text-white font-bold text-lg">#V</p> */}
-      <PrimaryButton label="EU QUERO VIVER ISSO"/>
+      <PrimaryButton url="https://www.ticketmaster.com.br/event/transporte-lollapalooza" label="EU QUERO VIVER ESSA EXPERIÊNCIA"/>
     </div>
   </div>
 </section>

@@ -1,9 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import Step1 from "../../../public/passo-1.png";
 import Step2 from "../../../public/passo-2.png";
 import Step3 from "../../../public/passo-3.png";
-
-import PrimaryButton from "../buttons/primary";
 
 export default function How() {
   const steps = [
@@ -20,7 +19,6 @@ export default function How() {
       description: "Escolha o horário de ida e volta",
       image: Step3,
     },
-    // {key: 4, title: "4º Passo", description: "Selecione a quantidade e finalize seu pagamento"},
   ];
   return (
     <section className="py-12 bg-accent">
@@ -51,7 +49,9 @@ export default function How() {
           ))}
         </div>
         <div className="mt-8 flex justify-center">
-          <button className="px-4 py-2 bg-primary text-base font-semibold h-12">Ficou com dúvidas? Fale conosco!</button>
+          <Link href="https://wa.me/558008801117">
+            <button className="px-4 py-2 bg-primary text-base font-semibold h-12">Ficou com dúvidas? Fale conosco!</button>
+          </Link>
         </div>
       </div>
     </section>

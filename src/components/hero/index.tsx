@@ -20,7 +20,7 @@ export default function Hero() {
         Viaje com a gente e transforme o trajeto em parte da experiência inesquecível do festival. #PartiuLolla!
         </p>
       </div>
-        <PrimaryButton label="GARANTIR MEU LUGAR" />
+      <PrimaryButton url="https://www.ticketmaster.com.br/event/transporte-lollapalooza" label="GARANTIR SEU TRANSFER"  />
     </section>
   );
 }

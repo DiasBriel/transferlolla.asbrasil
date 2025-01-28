@@ -20,7 +20,7 @@ export default function Nav() {
         <Link href="#" className="hover:underline">
           Dúvidas Frequentes
         </Link>
-       <PrimaryButton label="Fale Conosco" />
+       <PrimaryButton url="https://wa.me/558008801117" label="Fale Conosco" />
       </nav>
     </header>
   );
