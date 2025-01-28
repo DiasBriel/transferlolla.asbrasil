@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/transferlolla/(.*)",
+      "destination": "/$1"
+    }
+  ]
+}
