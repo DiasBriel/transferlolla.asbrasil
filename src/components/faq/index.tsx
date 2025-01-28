@@ -88,10 +88,10 @@ export default function FAQ() {
   ];
   return (
     <section className="bg-grey text-black py-10 px-5">
-      <h2 className="text-3xl text-accent-blue font-bold text-center mb-8">FAQ</h2>
+      <h2 className="text-3xl text-primary font-bold text-center mb-8">FAQ</h2>
       <div className="max-w-4xl mx-auto space-y-8">
-        {perguntas.map((item, index) => (
-          <div key={index}>
+        {perguntas.map((item) => (
+          <div key={item.pergunta}>
             <h3 className="text-xl font-semibold mb-2">{item.pergunta}</h3>
             <p className="text-base leading-relaxed whitespace-pre-line">
               {item.resposta}

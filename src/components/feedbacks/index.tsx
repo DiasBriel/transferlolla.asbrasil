@@ -1,12 +1,12 @@
+import Image from "next/image";
 import PrimaryButton from "../buttons/primary";
+import Exp from "../../../public/exp.jpg"
 
 export default function Feedbacks() {
-  return <section className="bg-primary-blue py-12">
+  return <section className=" py-12">
   <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-  <div className="grid grid-cols-2 gap-4">
-      <div className="w-full h-48 bg-gray-200 rounded-md"></div>
-      <div className="w-full h-48 bg-gray-200 rounded-md"></div>
-      <div className="w-full h-48 bg-gray-200 rounded-md col-span-2"></div>
+    <div className="w-full h-full bg-gray-200 rounded-md">
+      <Image src={Exp} alt="Experiencia"/>
     </div>
     <div>
       <h2 className="text-white text-3xl font-bold mb-4">
@@ -23,7 +23,6 @@ export default function Feedbacks() {
       {/* <p className="text-white font-bold text-lg">#V</p> */}
       <PrimaryButton label="EU QUERO VIVER ISSO"/>
     </div>
-   
   </div>
 </section>
 }

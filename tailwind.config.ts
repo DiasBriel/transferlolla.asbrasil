@@ -11,12 +11,17 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        "primary-blue": "#16214D",
-        "accent-blue": "#3F5AEB",
+        "primary": "#FB4C3B",
+        "accent": "#00B099",
         "white": "#FAFAFA",
-        "grey": "#F1F1F1"
+        "grey": "#F1F1F1",
+        "yellow": "#DDE329",
+        "green-lola": "#D6DF15"
+      },
+      backgroundImage: {
+        ttuPattern: "url('/bg.png')",
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 } satisfies Config;

@@ -1,26 +1,27 @@
 import PrimaryButton from "../buttons/primary";
+import Logo from "../../../public/logo.png"
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Nav() {
   return (
-    <header className="bg-black py-4 px-6 hidden md:flex justify-end space-x-10 items-center">
-      <h1 className="text-2xl font-bold">
-        {/* <span className="text-orange-500">2GO</span> Smart Mobility */}
-      </h1>
-      <nav className="flex justify-center gap-6 text-sm">
-        <a href="#" className="hover:underline">
+    <header className="bg-black py-4 px-6 hidden md:flex justify-between space-x-10 items-center">
+      <Image className="w-[200px] h-[50px] object-cover" src={Logo} alt="Logo" />
+      <nav className="flex justify-center items-center gap-6 text-sm">
+        <Link href="#" className="hover:underline">
           Sobre nós
-        </a>
-        <a href="#" className="hover:underline">
+        </Link>
+        <Link href="#" className="hover:underline">
           Embarque
-        </a>
-        <a href="#" className="hover:underline">
+        </Link>
+        <Link href="#" className="hover:underline">
           Garantir seu lugar  
-        </a>
-        <a href="#" className="hover:underline">
+        </Link>
+        <Link href="#" className="hover:underline">
           Dúvidas Frequentes
-        </a>
+        </Link>
+       <PrimaryButton label="Fale Conosco" />
       </nav>
-      <PrimaryButton label="Fale Conosco" />
     </header>
   );
 }
