@@ -3,6 +3,10 @@
     {
       "source": "/transferlolla/(.*)",
       "destination": "/$1"
+    },
+    {
+      "source": "/transferlolla",
+      "destination": "/"
     }
   ]
 }
