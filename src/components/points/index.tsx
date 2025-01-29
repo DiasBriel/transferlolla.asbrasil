@@ -1,4 +1,6 @@
+import { ticket, wpp } from "@/constants/links";
 import { Anton } from "next/font/google";
+import Link from "next/link";
 import { forwardRef } from "react";
 import { MdArrowDropDown } from "react-icons/md"; 
 
@@ -118,9 +120,15 @@ const Points = forwardRef<HTMLElement>((props, ref) =>{
             <MdArrowDropDown size={25} className="absolute right-3 top-4" />
             </summary>
             <div className="collapse-content">
-              <p className="font-semibold mb-2">{local.endereco}</p>
-              <p><span className="font-semibold">Ida:</span> {local.horarioIda}</p>
-              <p><span className="font-semibold">Volta:</span> {local.horarioVolta}</p>
+                <p className="font-semibold mb-2">{local.endereco}</p>
+              <div className=" flex flex-col lg:flex-row justify-between space-y-4 lg:items-center">
+                <div>
+                  <p><span className="font-semibold">Ida:</span> {local.horarioIda}</p>
+                  <p><span className="font-semibold">Volta:</span> {local.horarioVolta}</p>
+                </div>
+                <Link href={ticket} className="lg:w-1/3 text-sm bg-accent text-center h-12 lg:h-8 flex flex-col justify-center hover:cursor-pointer">COMPRE AGORA</Link>
+              </div>
+
             </div>
           </details>
         ))}

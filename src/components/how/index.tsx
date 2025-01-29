@@ -1,7 +1,9 @@
+import { wpp } from "@/constants/links";
 import { Anton } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { forwardRef } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 import Step1 from "../../../public/passo-1.png";
 import Step2 from "../../../public/passo-2.png";
 import Step3 from "../../../public/passo-3.png";
@@ -53,8 +55,8 @@ const How = forwardRef<HTMLElement>((props, ref) =>{
           ))}
         </div>
         <div className="mt-8 flex justify-center">
-          <Link href="https://wa.me/558008801117">
-            <button className="px-4 py-2 bg-primary text-base font-semibold h-12">Ficou com dúvidas? Fale conosco!</button>
+          <Link href={wpp}>
+            <button className="px-4 py-2 bg-primary text-base font-semibold h-12 flex items-center"><FaWhatsapp size={25} className="mr-3"/>  Ficou com dúvidas? Fale conosco!</button>
           </Link>
         </div>
       </div>

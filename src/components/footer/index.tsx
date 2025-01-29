@@ -1,4 +1,5 @@
 // components/Footer.js
+import { wpp } from '@/constants/links';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp, FaYoutube } from 'react-icons/fa';
@@ -18,7 +19,7 @@ export default function Footer() {
         <div className="w-full md:w-1/4 mb-6 md:mb-0">
           <h3 className="text-lg font-bold mb-2 text-green-lola">Redes Sociais</h3>
           <ul className="text-[35px] grid grid-cols-3 gap-6 w-1/2">
-            <li><Link href="https://wa.me/558008801117"><FaWhatsapp className='cursor-pointer hover:scale-105' /></Link></li>
+            <li><Link href={wpp}><FaWhatsapp className='cursor-pointer hover:scale-105' /></Link></li>
             <li><Link href="https://www.instagram.com/as.brasil/"><FaInstagram /></Link></li>
             <li><Link href="https://www.youtube.com/@as.brasil"><FaYoutube className='cursor-pointer hover:scale-105'/></Link></li>
             <li><Link href="https://www.facebook.com/asbrasil.dmc/"><FaFacebook className='cursor-pointer hover:scale-105'/></Link></li>

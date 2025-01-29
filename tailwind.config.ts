@@ -20,6 +20,7 @@ export default {
       },
       backgroundImage: {
         ttuPattern: "url('/bg2.png')",
+        mobile: "url('/mobile.jpg')",
       },
       fontFamily: {
         anton: ['var(--font-anton)']

@@ -2,12 +2,13 @@ import Link from "next/link";
 
 interface IButton {
   label: string;
-  url: string
+  url: string;
+  className?: string;
 }
 
-export default function PrimaryButton({ label, url }: IButton) {
+export default function PrimaryButton({ label, url, className }: IButton) {
   return (
-    <Link href={url} className="bg-accent text-white px-4 py-2 hover:scale-105 md:transition md:duration-150">
+    <Link href={url} className={"bg-accent text-white text-center px-4 py-2 hover:scale-105 md:transition md:duration-150" + ` ${className}`}>
       {label}
     </Link>
   );

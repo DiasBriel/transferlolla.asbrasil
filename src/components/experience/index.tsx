@@ -1,49 +1,93 @@
 "use client";
+import { wpp } from "@/constants/links";
 import { Anton } from "next/font/google";
+import { BsPersonBadgeFill } from "react-icons/bs";
+import { FaBusAlt, FaStar } from "react-icons/fa";
+import { MdLocationOn, MdOutlineAttachMoney } from "react-icons/md";
 import YouTube from "react-youtube";
+import PrimaryButton from "../buttons/primary";
 
-const anton = Anton({ subsets: ['latin'], weight: "400", variable: "--font-anton" })
+const anton = Anton({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-anton",
+});
 
 export default function Experience() {
+  const benefits = [
+    {text: "Transporte Ida e Volta", icon: <FaBusAlt size={20} />},
+    {text: "Diversos Pontos de Embarque", icon: <MdLocationOn size={20} />},
+    {text: "Suporte, Monitores e Seguranças durante os embarques", icon: <BsPersonBadgeFill size={20} />},
+    {text: "Conforto e Praticidade", icon: <FaStar size={20} />},
+  ]
+
   return (
     <section className="bg-green-lola text-white py-12 px-6">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-8">
-        <div className="flex flex-col items-center lg:items-start">
-          <h3 className={`${anton.className} text-center lg:text-start text-lg text-black font-bold mb-4`}>
-            Confira uma amostra do que oferecemos:
-          </h3>
+      <div className="flex flex-col lg:grid grid-cols-12 gap-8">
+        <div className="col-span-4 col-start-3 flex flex-col items-center lg:items-start">
+          <h2
+            className={`${anton.className} whitespace-nowrap text-center lg:text-start text-xl lg:text-2xl text-black font-bold uppercase`}
+          >
+            Confira na prática como funciona
+          </h2>
+          <h2
+            className={`${anton.className}  text-center lg:text-start text-xl lg:text-2xl text-black font-bold mb-4 uppercase`}
+          >
+           Operação de transporte no show da Taylor Swift
+          </h2>
           <YouTube
-            className="lg:hidden w-full aspect-video rounded-md overflow-hidden"
+            className="lg:hidden w-full h-[400px] aspect-video rounded-md"
             videoId="Paqw4qYAre4"
             opts={{
               width: "100%",
-              height: "auto",
+              height: "400",
               playerVars: { rel: 0 },
             }}
-            />
-            <div className="hidden lg:block w-1/3 lg:w-full rounded-md overflow-hidden">
-           <YouTube
-            videoId="Paqw4qYAre4"
           />
+          <div className="hidden lg:block w-1/3 lg:w-full rounded-md overflow-hidden">
+            <YouTube videoId="Paqw4qYAre4" opts={{
+              width: "100%",
+              height: "350",
+              playerVars: { rel: 0 },
+            }} />
           </div>
         </div>
-        <div className="flex flex-col gap-4 lg:w-1/2">
-          <h2 className={`${anton.className} text-3xl leading-snug text-black text-center lg:text-start`}>
-            A <span className="text-primary">ASBrasil</span> garante ser o
-            melhor serviço de transporte que você irá contratar!
+
+        <div className="col-span-4 flex flex-col items-center lg:items-start w-full">
+          <h2
+            className={`${anton.className} whitespace-nowrap text-center lg:text-start text-xl lg:text-2xl text-black font-bold uppercase`}
+          >
+            CHEGA DE PERRENGUE NA SAÍDA! A <span className="text-primary">ASBrasil</span>
           </h2>
-          <div className="bg-primary p-6 rounded-lg shadow-md">
+          <h2 className={`${anton.className}  text-center lg:text-start text-xl lg:text-2xl text-black font-bold uppercase mb-4`}>
+            É o melhor serviço de transporte que você irá contratar!
+          </h2>
+          <div className="bg-primary p-4 lg:p-6 rounded-lg shadow-md mb-3 h-[350px] w-full">
             <h3 className="text-xl font-bold mb-4 text-white">
-              Com a ASBrasil você tem:
+              A ASBRASIL Garante ser:
             </h3>
-            <ul className="list-disc text-white list-inside space-y-2">
-              <li>Transporte Ida e Volta</li>
-              <li>Diversos Pontos de Embarque</li>
-              <li>Conforto, segurança e Praticidade</li>
-              <li>Atendimento Personalizado e Suporte Pós Show</li>
-              <li>Transfer Direto Para o Autódromo de Interlagos</li>
+            <ul className="text-white list-inside space-y-5">
+              {benefits.map(benefit => (
+                <div key={benefit.text} className="flex items-center space-x-4">
+                  {benefit.icon}
+                  <li>{benefit.text}</li>
+                </div>
+              ))}
+              <div className="flex space-x-2">
+                <MdOutlineAttachMoney size={26} />
+                <div className="flex flex-col">
+                  <li>Tarifas acessíveis para ida e volta.</li>
+                  <span>Ida: à partir de R$25,00</span>
+                  <span>Volta: à partir de R$ 40,00</span>
+                </div>
+              </div>
             </ul>
           </div>
+          <PrimaryButton
+            url={wpp}
+            label="COMPRE AGORA MESMO"
+            className="w-full lg:w-1/2"
+          />
         </div>
       </div>
     </section>

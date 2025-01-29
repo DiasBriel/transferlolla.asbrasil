@@ -1,6 +1,7 @@
 import PrimaryButton from "../buttons/primary";
 import Logo from "../../../public/logo.png"
 import Image from "next/image";
+import { wpp } from "@/constants/links";
 
 export default function Nav({onClick}: any) {
   return (
@@ -19,7 +20,7 @@ export default function Nav({onClick}: any) {
         <button onClick={() => onClick("faq")} className="hover:underline">
           Dúvidas Frequentes
         </button>
-       <PrimaryButton url="https://wa.me/558008801117" label="Fale Conosco" />
+       <PrimaryButton url={wpp} label="FALE CONOSCO" />
       </nav>
     </header>
   );
