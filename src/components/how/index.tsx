@@ -1,10 +1,14 @@
+import { Anton } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { forwardRef } from "react";
 import Step1 from "../../../public/passo-1.png";
 import Step2 from "../../../public/passo-2.png";
 import Step3 from "../../../public/passo-3.png";
 
-export default function How() {
+const anton = Anton({ subsets: ['latin'], weight: "400", variable: "--font-anton" })
+
+const How = forwardRef<HTMLElement>((props, ref) =>{
   const steps = [
     { key: 1, title: "1º Passo", description: "Escolha o dia", image: Step1 },
     {
@@ -21,9 +25,9 @@ export default function How() {
     },
   ];
   return (
-    <section className="py-12 bg-accent">
+    <section ref={ref} className="py-12 bg-accent">
       <div className="container mx-auto px-4">
-        <h2 className="text-white text-center text-3xl font-bold mb-8">
+        <h2 className={`${anton.className} text-white text-center text-3xl mb-8`}>
           Como adquirir meu lugar
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
@@ -56,4 +60,6 @@ export default function How() {
       </div>
     </section>
   );
-}
+})
+
+export default How

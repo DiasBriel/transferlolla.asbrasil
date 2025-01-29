@@ -1,5 +1,10 @@
+import { Anton } from "next/font/google";
+import { forwardRef } from "react";
 import { MdArrowDropDown } from "react-icons/md"; 
-export default function Points() {
+
+const anton = Anton({ subsets: ['latin'], weight: "400", variable: "--font-anton" })
+
+const Points = forwardRef<HTMLElement>((props, ref) =>{
   const locais = [
     {
       titulo: "Centro Histórico | Hotel Ibis Styles",
@@ -101,8 +106,8 @@ export default function Points() {
   ];
 
   return (
-    <section className=" text-white py-10">
-      <h2 className="text-3xl lg:text-4xl text-primary font-bold text-center mb-8">
+    <section ref={ref} className=" text-white py-10">
+      <h2 className={`${anton.className} text-3xl lg:text-4xl text-primary text-center mb-8`}>
         Pontos de embarque
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mx-2 lg:mx-12">
@@ -122,4 +127,6 @@ export default function Points() {
       </div>
     </section>
   );
-}
+})
+
+export default Points;

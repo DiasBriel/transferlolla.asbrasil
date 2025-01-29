@@ -1,4 +1,11 @@
-export default function FAQ() {
+import { Anton } from "next/font/google";
+import { forwardRef } from "react";
+
+const anton = Anton({ subsets: ['latin'], weight: "400", variable: "--font-anton" })
+
+
+const Faq = forwardRef<HTMLElement>((props, ref) =>{
+
   const perguntas = [
     {
       pergunta:
@@ -87,8 +94,8 @@ export default function FAQ() {
     },
   ];
   return (
-    <section className="bg-grey text-black py-10 px-5">
-      <h2 className="text-3xl text-primary font-bold text-center mb-8">FAQ</h2>
+    <section ref={ref} className="bg-grey text-black py-10 px-5">
+      <h2 className={`${anton.className} text-3xl text-primary text-center mb-8`}>FAQ</h2>
       <div className="max-w-4xl mx-auto space-y-8">
         {perguntas.map((item) => (
           <div key={item.pergunta}>
@@ -101,4 +108,6 @@ export default function FAQ() {
       </div>
     </section>
   );
-}
+})
+
+export default Faq;

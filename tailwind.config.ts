@@ -19,8 +19,11 @@ export default {
         "green-lola": "#D6DF15"
       },
       backgroundImage: {
-        ttuPattern: "url('/bg.png')",
+        ttuPattern: "url('/bg2.png')",
       },
+      fontFamily: {
+        anton: ['var(--font-anton)']
+      }
     },
   },
   plugins: [require('daisyui')],
