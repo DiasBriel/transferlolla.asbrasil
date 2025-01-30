@@ -38,7 +38,7 @@ export default function Experience() {
             Confira na prática como funciona
           </h2>
           <h2
-            className={`${anton.className} text-xl lg:text-2xl text-black font-light mb-4`}
+            className={`${anton.className}  text-center lg:text-start text-xl lg:text-2xl text-black font-light mb-4`}
           >
             Operação de transporte no show da Taylor Swift
           </h2>
