@@ -1,6 +1,6 @@
 "use client";
 import { wpp } from "@/constants/links";
-import { Anton, Antonio, Inter } from "next/font/google";
+import { Antonio, Inter } from "next/font/google";
 import { BsPersonBadgeFill } from "react-icons/bs";
 import { FaBusAlt, FaStar } from "react-icons/fa";
 import { MdLocationOn, MdOutlineAttachMoney } from "react-icons/md";
@@ -68,8 +68,8 @@ export default function Experience() {
           <h2
             className={`${anton.className} whitespace-nowrap text-center lg:text-start text-2xl lg:text-3xl text-black font-[700] uppercase`}
           >
-            CHEGA DE PERRENGUE NA SAÍDA! A{" "}
-            <span className="text-primary">ASBrasil</span>
+            CHEGA DE PERRENGUE NA SAÍDA! <span className={`${anton.className} font-light`}>A{" "}</span>
+            <span className={`${anton.className} font-light text-primary`}>ASBrasil</span>
           </h2>
           <h2
             className={`${anton.className} text-center lg:text-start text-xl lg:text-2xl text-black uppercase mb-4`}
