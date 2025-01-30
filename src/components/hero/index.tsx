@@ -17,7 +17,7 @@ export default function Hero() {
 
         <Image src={Logo} alt="Logo" className="h-[70px] my-4 w-[250px] lg:w-[350px] object-contain"/>
       </div>
-      <div className="mb-8 text-white font-semibold">
+      <div className=" text-white font-semibold">
         <p className="font-sans text-md">
           Garanta sua ida ao Lollapalooza com conforto, 
           segurança e animação! 
@@ -26,6 +26,7 @@ export default function Hero() {
           Viaje com a gente e transforme o trajeto em parte da experiência inesquecível do festival. #PartiuLolla!
         </p>
       </div>
+      <p className={`${anton.className} my-5 leading-none text-green-lola`}>Canal de vendas oficial: ticketmaster</p>
       <PrimaryButton url={ticket} label="GARANTIR SEU TRANSFER"  />
     </section>
   );
