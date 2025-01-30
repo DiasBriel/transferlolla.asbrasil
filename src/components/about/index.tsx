@@ -32,20 +32,14 @@ const About = forwardRef<HTMLElement>((props, ref) => {
           <h2
             className={`${anton.className} text-primary text-2xl lg:text-3xl text-center lg:text-start mb-4`}
           >
-            Sobre AS BRASIL - Transporte Ofical da Ticketmaster
+            Sobre AS BRASIL - Transporte Oficial da Ticketmaster
           </h2>
-          <p>
+          <p className="mb-6">
             Na AS Brasil, entendemos que a logística e a coordenação eficazes
             são fundamentais para o sucesso de qualquer evento. Com anos de
             experiência no mercado, somos especialistas em planejar e executar
             pequenos, médios e grandes eventos, garantindo que cada detalhe
             esteja perfeitamente alinhado.
-          </p>
-          <p className="mb-8">
-            De pequenas reuniões a grandes conferências, nós temos a experiência
-            e a dedicação para transformar seu evento em um sucesso absoluto.
-            Entre em contato conosco e descubra como podemos ajudar a tornar seu
-            próximo evento inesquecível!
           </p>
           <PrimaryButton url={wpp} label="FALE CONOSCO" className="w-full lg:w-1/3" />
         </div>

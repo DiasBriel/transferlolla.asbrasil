@@ -9,8 +9,12 @@ import Hero from "@/components/hero/index";
 import How from "@/components/how/index";
 import Nav from "@/components/nav/index";
 import Points from "@/components/points/index";
+import { wpp } from "@/constants/links";
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
+import Wpp from '../../public/wpp.png'
 
 export default function Home() {
   const aboutRef = useRef<HTMLElement>(null);
@@ -50,6 +54,9 @@ export default function Home() {
         <Feedbacks />
         <FAQ ref={refs.faq}/>
         <Footer />
+        <Link href={wpp} className="fixed right-2 bottom-2 lg:right-4 lg:bottom-4">
+          <Image src={Wpp} alt="WhatsApp link"  className="w-20 h-20 lg:w-24 lg:h-24"/>
+        </Link>
       </main>
     </>
   );

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PrimaryButton from "../buttons/primary";
-import Logo from "../../../public/ticketlogo.png"
+import Logo from "../../../public/logo.png"
+import TicketLogo from "../../../public/ticketlogo.png"
 import {Anton} from "next/font/google"
 import { ticket } from "@/constants/links";
 
@@ -12,7 +13,10 @@ export default function Hero() {
       <h2 className={`${anton.className} text-[2rem] md:text-[3.5rem] leading-none text-green-lola`}>
         TRANSFER LOLLA 
       </h2>
-      <Image src={Logo} alt="Logo" className="h-[80px] my-4 w-[280px] object-contain"/>
+      <div className="flex flex-col justify-end">
+
+        <Image src={Logo} alt="Logo" className="h-[70px] my-4 w-[250px] lg:w-[350px] object-contain"/>
+      </div>
       <div className="mb-8 text-white font-semibold">
         <p className="font-sans text-md">
           Garanta sua ida ao Lollapalooza com conforto, 

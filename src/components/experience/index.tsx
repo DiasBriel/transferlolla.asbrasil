@@ -1,40 +1,48 @@
 "use client";
 import { wpp } from "@/constants/links";
-import { Anton } from "next/font/google";
+import { Anton, Antonio, Inter } from "next/font/google";
 import { BsPersonBadgeFill } from "react-icons/bs";
 import { FaBusAlt, FaStar } from "react-icons/fa";
 import { MdLocationOn, MdOutlineAttachMoney } from "react-icons/md";
 import YouTube from "react-youtube";
 import PrimaryButton from "../buttons/primary";
 
-const anton = Anton({
+const anton = Antonio({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["200", "300", "400", "500", "600", "700"],
   variable: "--font-anton",
 });
-
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"], // Defina pesos variados
+  variable: "--font-inter",
+});
 export default function Experience() {
   const benefits = [
-    {text: "Transporte Ida e Volta", icon: <FaBusAlt size={20} />},
-    {text: "Diversos Pontos de Embarque", icon: <MdLocationOn size={20} />},
-    {text: "Suporte, Monitores e Seguranças durante os embarques", icon: <BsPersonBadgeFill size={20} />},
-    {text: "Conforto e Praticidade", icon: <FaStar size={20} />},
-  ]
+    { text: "Transporte Ida e Volta", icon: <FaBusAlt size={20} /> },
+    { text: "Diversos Pontos de Embarque", icon: <MdLocationOn size={20} /> },
+    {
+      text: "Suporte, Monitores e Seguranças durante os embarques",
+      icon: <BsPersonBadgeFill size={20} />,
+    },
+    { text: "Conforto e Praticidade", icon: <FaStar size={20} /> },
+  ];
 
   return (
     <section className="bg-green-lola text-white py-12 px-6">
       <div className="flex flex-col lg:grid grid-cols-12 gap-8">
         <div className="col-span-4 col-start-3 flex flex-col items-center lg:items-start">
           <h2
-            className={`${anton.className} whitespace-nowrap text-center lg:text-start text-xl lg:text-2xl text-black font-bold uppercase`}
+            className={`${anton.className} whitespace-nowrap text-center lg:text-start text-2xl lg:text-3xl text-black font-[700] uppercase`}
           >
             Confira na prática como funciona
           </h2>
           <h2
-            className={`${anton.className}  text-center lg:text-start text-xl lg:text-2xl text-black font-bold mb-4 uppercase`}
+            className={`${anton.className} text-xl lg:text-2xl text-black font-light mb-4`}
           >
-           Operação de transporte no show da Taylor Swift
+            Operação de transporte no show da Taylor Swift
           </h2>
+
           <YouTube
             className="lg:hidden w-full h-[400px] aspect-video rounded-md"
             videoId="Paqw4qYAre4"
@@ -45,21 +53,27 @@ export default function Experience() {
             }}
           />
           <div className="hidden lg:block w-1/3 lg:w-full rounded-md overflow-hidden">
-            <YouTube videoId="Paqw4qYAre4" opts={{
-              width: "100%",
-              height: "350",
-              playerVars: { rel: 0 },
-            }} />
+            <YouTube
+              videoId="Paqw4qYAre4"
+              opts={{
+                width: "100%",
+                height: "350",
+                playerVars: { rel: 0 },
+              }}
+            />
           </div>
         </div>
 
         <div className="col-span-4 flex flex-col items-center lg:items-start w-full">
           <h2
-            className={`${anton.className} whitespace-nowrap text-center lg:text-start text-xl lg:text-2xl text-black font-bold uppercase`}
+            className={`${anton.className} whitespace-nowrap text-center lg:text-start text-2xl lg:text-3xl text-black font-[700] uppercase`}
           >
-            CHEGA DE PERRENGUE NA SAÍDA! A <span className="text-primary">ASBrasil</span>
+            CHEGA DE PERRENGUE NA SAÍDA! A{" "}
+            <span className="text-primary">ASBrasil</span>
           </h2>
-          <h2 className={`${anton.className}  text-center lg:text-start text-xl lg:text-2xl text-black font-bold uppercase mb-4`}>
+          <h2
+            className={`${anton.className} text-center lg:text-start text-xl lg:text-2xl text-black uppercase mb-4`}
+          >
             É o melhor serviço de transporte que você irá contratar!
           </h2>
           <div className="bg-primary p-4 lg:p-6 rounded-lg shadow-md mb-3 h-[350px] w-full">
@@ -67,7 +81,7 @@ export default function Experience() {
               A ASBRASIL Garante ser:
             </h3>
             <ul className="text-white list-inside space-y-5">
-              {benefits.map(benefit => (
+              {benefits.map((benefit) => (
                 <div key={benefit.text} className="flex items-center space-x-4">
                   {benefit.icon}
                   <li>{benefit.text}</li>

@@ -108,32 +108,36 @@ const Points = forwardRef<HTMLElement>((props, ref) =>{
   ];
 
   return (
-    <section ref={ref} className=" text-white py-10">
-      <h2 className={`${anton.className} text-3xl lg:text-4xl text-primary text-center mb-8`}>
-        Pontos de embarque
-      </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mx-2 lg:mx-12">
-        {locais.map((local) => (
-          <details  key={local.titulo} className="collapse bg-transparent border border-white">
-            <summary  className="relative collapse-title text-base lg:text-sm font-medium">
-             {local.titulo}
+    <section ref={ref} className="text-white py-10">
+    <h2 className={`${anton.className} text-3xl lg:text-4xl text-primary text-center mb-8`}>
+      Pontos de embarque
+    </h2>
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mx-2 lg:mx-12 lg:[grid-auto-rows:min-content]">
+      {locais.map((local) => (
+        <details key={local.titulo} className="collapse bg-transparent border border-white self-start">
+          <summary className="relative collapse-title text-base lg:text-sm font-medium">
+            {local.titulo}
             <MdArrowDropDown size={25} className="absolute right-3 top-4" />
-            </summary>
-            <div className="collapse-content">
-                <p className="font-semibold mb-2">{local.endereco}</p>
-              <div className=" flex flex-col lg:flex-row justify-between space-y-4 lg:items-center">
-                <div>
-                  <p><span className="font-semibold">Ida:</span> {local.horarioIda}</p>
-                  <p><span className="font-semibold">Volta:</span> {local.horarioVolta}</p>
-                </div>
-                <Link href={ticket} className="lg:w-1/3 text-sm bg-accent text-center h-12 lg:h-8 flex flex-col justify-center hover:cursor-pointer">COMPRE AGORA</Link>
+          </summary>
+          <div className="collapse-content">
+            <p className="font-semibold mb-2">{local.endereco}</p>
+            <div className="flex flex-col lg:flex-row justify-between space-y-4 lg:items-center">
+              <div>
+                <p><span className="font-semibold">Ida:</span> {local.horarioIda}</p>
+                <p><span className="font-semibold">Volta:</span> {local.horarioVolta}</p>
               </div>
-
+              <Link 
+                href={ticket} 
+                className="lg:w-1/3 text-sm bg-accent text-center h-12 lg:h-8 flex flex-col justify-center hover:cursor-pointer">
+                COMPRE AGORA
+              </Link>
             </div>
-          </details>
-        ))}
-      </div>
-    </section>
+          </div>
+        </details>
+      ))}
+    </div>
+  </section>
+  
   );
 })
 
