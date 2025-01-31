@@ -31,14 +31,14 @@ export default function Experience() {
   return (
     <section className="bg-green-lola text-white py-12 px-6">
       <div className="flex flex-col lg:grid grid-cols-12 gap-8">
-        <div className="col-span-4 col-start-3 flex flex-col items-center lg:items-start">
+        <div className="col-span-5 2xl:col-span-4 col-start-2 2xl:col-start-3 flex flex-col items-center lg:items-start">
           <h2
-            className={`${anton.className} whitespace-nowrap text-center lg:text-start text-2xl lg:text-3xl text-black font-[700] uppercase`}
+            className={`${anton.className} max-w-[100%] text-center lg:text-start text-2xl lg:text-3xl text-black font-[700] uppercase`}
           >
             Confira na prática como funciona
           </h2>
           <h2
-            className={`${anton.className}  text-center lg:text-start text-xl lg:text-2xl text-black font-light mb-4`}
+            className={`${anton.className} max-w-[80%] text-center lg:text-start text-xl lg:text-2xl text-black font-light mb-4`}
           >
             Operação de transporte no show da Taylor Swift
           </h2>
@@ -64,12 +64,12 @@ export default function Experience() {
           </div>
         </div>
 
-        <div className="col-span-4 flex flex-col items-center lg:items-start w-full">
+        <div className="col-span-5 2xl:col-span-4 flex flex-col items-center lg:items-start w-full">
           <h2
-            className={`${anton.className} whitespace-nowrap text-center lg:text-start text-2xl lg:text-3xl text-black font-[700] uppercase`}
+            className={`${anton.className} max-w-[100%] text-center lg:text-start text-2xl lg:text-3xl text-black font-[700] uppercase`}
           >
             CHEGA DE PERRENGUE NA SAÍDA! <span className={`${anton.className} font-light`}>A{" "}</span>
-            <span className={`${anton.className} font-light text-primary`}>ASBrasil</span>
+            <span className={`${anton.className} font-light text-primary`}>AS Brasil</span>
           </h2>
           <h2
             className={`${anton.className} text-center lg:text-start text-xl lg:text-2xl text-black uppercase mb-4`}

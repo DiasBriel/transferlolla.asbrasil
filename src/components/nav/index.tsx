@@ -1,12 +1,12 @@
 import PrimaryButton from "../buttons/primary";
-import Logo from "../../../public/logo.png"
+import Logo from "../../../public/logo-branca.png"
 import Image from "next/image";
 import { wpp } from "@/constants/links";
 
 export default function Nav({onClick}: any) {
   return (
     <header className="bg-black py-4 px-6 hidden md:flex justify-between space-x-10 items-center">
-      <Image className="w-[200px] h-[50px] object-cover" src={Logo} alt="Logo" />
+      <Image className="w-[170px] h-[50px] object-contain" src={Logo} alt="Logo" />
       <nav className="flex justify-center items-center gap-6 text-sm">
         <button onClick={() => onClick("about")} className="hover:underline">
           Sobre nós

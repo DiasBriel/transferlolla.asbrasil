@@ -1,7 +1,6 @@
 import Image from "next/image";
 import PrimaryButton from "../buttons/primary";
-import Logo from "../../../public/logo.png"
-import TicketLogo from "../../../public/ticketlogo.png"
+import Logo from "../../../public/logo-2.png"
 import {Anton} from "next/font/google"
 import { ticket } from "@/constants/links";
 
@@ -22,11 +21,10 @@ export default function Hero() {
           Garanta sua ida ao Lollapalooza com conforto, 
           segurança e animação! 
         </p>
-        <p className="text-md font-sans">
+        <p className="text-md mb-8 font-sans">
           Viaje com a gente e transforme o trajeto em parte da experiência inesquecível do festival. #PartiuLolla!
         </p>
       </div>
-      <p className={`${anton.className} my-5 leading-none text-green-lola`}>Canal de vendas oficial: ticketmaster</p>
       <PrimaryButton url={ticket} label="GARANTIR SEU TRANSFER"  />
     </section>
   );

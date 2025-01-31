@@ -28,7 +28,7 @@ const About = forwardRef<HTMLElement>((props, ref) => {
             <Image src={Ab1} alt="image" className="object-cover h-48" />
           </div>
         </div>
-        <div className=" xl:w-1/3 text-justify flex flex-col lg:my-auto">
+        <div className="lg:w-1/2 xl:w-1/3 text-justify flex flex-col lg:my-auto">
           <h2
             className={`${anton.className} text-primary text-2xl lg:text-3xl text-center lg:text-start mb-4`}
           >
