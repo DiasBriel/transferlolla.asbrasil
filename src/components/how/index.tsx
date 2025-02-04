@@ -22,41 +22,41 @@ const How = forwardRef<HTMLElement>((props, ref) =>{
     {
       key: 3,
       title: "3º Passo",
-      description: "Escolha o horário de ida e volta",
+      description: "Escolha o horário de ida e volta separadamente",
       image: Step3,
     },
   ];
   return (
     <section ref={ref} className="py-12 bg-accent">
-      <div className="container mx-auto px-4">
+      <div className="lg:container mx-auto px-4">
         <h2 className={`${anton.className} text-white text-center text-3xl mb-8`}>
           Como adquirir meu lugar
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
+        <div className="flex flex-col items-center md:flex-row md:justify-evenly space-y-8 md:space-y-0 md:space-x-4">
           {steps.map((step, index) => (
             <div
               key={step.key}
-              className={`${index === 0 && " md:col-start-2"}`}
+              className={`${index === 0 && " "}`}
             >
-              <div className="w-full mx-auto rounded-[12px] mb-4">
+              <div className="rounded-[12px] mb-4">
                 <Image
                   src={step.image}
                   alt="Passo 1"
-                  className="rounded-[12px]"
+                  className="rounded-[12px] object-cover w-[550px] lg:w-[390px] md:h-[470px] xl:h-[560px]"
                 />
               </div>
-              <div className="bg-green-lola text-black p-4 rounded-md">
-                <h3 className=" font-bold text-lg mb-2">
+              <div className="bg-green-lola text-black p-4 rounded-md h-[120px]">
+                <h3 className="font-bold mb-6 md:mb-2">
                   {step.title}
                 </h3>
-                <p className="">{step.description}</p>
+                <p className="font-semibold">{step.description}</p>
               </div>
             </div>
           ))}
         </div>
         <div className="mt-8 flex justify-center">
-          <Link href={wpp}>
-            <button className="px-4 py-2 bg-primary text-base font-semibold h-12 flex items-center"><FaWhatsapp size={25} className="mr-3"/>  Ficou com dúvidas? Fale conosco!</button>
+          <Link className="flex justify-center" href={wpp}>
+            <button className=" px-4 py-2 bg-primary text-base font-semibold h-12 flex items-center"><FaWhatsapp size={25} className="mr-3"/>  Ficou com dúvidas? Fale conosco!</button>
           </Link>
         </div>
       </div>

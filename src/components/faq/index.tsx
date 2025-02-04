@@ -11,7 +11,7 @@ const Faq = forwardRef<HTMLElement>((props, ref) =>{
       pergunta:
         "Posso comprar somente um trecho: ida ou volta para o Lollapalooza?",
       resposta:
-        "Os ingressos são vendidos apenas com o trajeto de ida e de volta. Porém, você pode usar apenas um trecho do trajeto (ida ou volta).",
+        "Sim! Os ingressos são vendidos separadamente para ida e volta. Você pode escolher utilizar apenas um dos trechos, conforme sua necessidade.",
     },
     {
       pergunta: "Como funciona os embarques de IDA para o Lollapalooza?",

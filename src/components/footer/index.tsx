@@ -30,7 +30,7 @@ export default function Footer() {
         <div className="w-full md:w-1/4 mb-6 md:mb-0">
           <h3 className="text-lg font-bold mb-2 text-green-lola">Contatos</h3>
           <p className='text-primary font-semibold'>Telefone</p>
-          <p className="text-md">0800 880 1117</p>
+          <p className="text-md">(21) 97227-1212</p>
           <p className='text-primary font-semibold mt-8'>E-mail</p>
           <p className="text-md">contato@asbrasil.tur.br</p>
         </div>
