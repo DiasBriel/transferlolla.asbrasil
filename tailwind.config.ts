@@ -11,15 +11,15 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        "primary": "#FB4C3B",
-        "accent": "#00B099",
+        "primary": "#d52ad7",
+        "accent": "#024ddf",
         "white": "#FAFAFA",
         "grey": "#F1F1F1",
         "yellow": "#DDE329",
-        "green-lola": "#D6DF15"
+        "green-lola": "#ffb607"
       },
       backgroundImage: {
-        ttuPattern: "url('/bg2.png')",
+        ttuPattern: "url('/bg2.jpg')",
         mobile: "url('/mobile.jpg')",
       },
       fontFamily: {

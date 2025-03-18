@@ -16,13 +16,13 @@ const How = forwardRef<HTMLElement>((props, ref) =>{
     {
       key: 2,
       title: "2º Passo",
-      description: "Escolha o local de embarque",
+      description: "Escolha o dia e o seu local de embarque",
       image: Step2,
     },
     {
       key: 3,
       title: "3º Passo",
-      description: "Escolha o horário de ida e volta separadamente",
+      description: "Escolha o horário do seu transfer",
       image: Step3,
     },
   ];
@@ -42,7 +42,7 @@ const How = forwardRef<HTMLElement>((props, ref) =>{
                 <Image
                   src={step.image}
                   alt="Passo 1"
-                  className="rounded-[12px] object-cover w-[550px] lg:w-[390px] md:h-[470px] xl:h-[560px]"
+                  className="rounded-[12px] object-contain w-[550px] lg:w-[390px] md:h-[470px] xl:h-[560px]"
                 />
               </div>
               <div className="bg-green-lola text-black p-4 rounded-md h-[120px]">

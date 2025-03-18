@@ -32,7 +32,7 @@ const About = forwardRef<HTMLElement>((props, ref) => {
           <h2
             className={`${anton.className} text-primary text-2xl lg:text-3xl text-center lg:text-start mb-4`}
           >
-            Sobre AS BRASIL - Transporte Oficial da Ticketmaster
+            Sobre AS BRASIL
           </h2>
           <p className="mb-6">
             Na AS Brasil, entendemos que a logística e a coordenação eficazes

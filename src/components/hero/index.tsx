@@ -1,6 +1,6 @@
 import Image from "next/image";
 import PrimaryButton from "../buttons/primary";
-import Logo from "../../../public/logo-2.png"
+import Logo from "../../../public/logo-branca.png"
 import {Anton} from "next/font/google"
 import { ticket } from "@/constants/links";
 
