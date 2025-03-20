@@ -1,5 +1,5 @@
 "use client";
-import { wpp } from "@/constants/links";
+import { ticket, wpp } from "@/constants/links";
 import { Antonio, Inter } from "next/font/google";
 import { BsPersonBadgeFill } from "react-icons/bs";
 import { FaBusAlt, FaStar } from "react-icons/fa";
@@ -98,7 +98,7 @@ export default function Experience() {
             </ul>
           </div>
           <PrimaryButton
-            url={wpp}
+            url={ticket}
             label="COMPRE AGORA MESMO"
             className="w-full lg:w-1/2"
           />
